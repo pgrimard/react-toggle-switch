@@ -21,7 +21,7 @@ export default class MyComponent extends React.Component {
   render() {
     return (
         <div>
-            <Switch value={value} on={true} onClick={this.toggle}/>
+            <Switch value={'some string or integer value'} on={true} onClick={this.toggle}/>
         </div>
     );
   }
