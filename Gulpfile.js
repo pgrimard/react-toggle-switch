@@ -2,18 +2,12 @@ var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var streamify = require('gulp-streamify');
 var rename = require('gulp-rename');
-var gulpif = require('gulp-if');
-var rev = require('gulp-rev');
-var inject = require('gulp-inject');
 var minifyCss = require('gulp-minify-css');
 
 var browserify = require('browserify');
 var babelify = require('babelify');
-var del = require('del');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
-var resolve = require('resolve');
-var series = require('stream-series');
 var argv = require('yargs').argv;
 
 var production = (process.env.NODE_ENV === 'production' || argv.production);
