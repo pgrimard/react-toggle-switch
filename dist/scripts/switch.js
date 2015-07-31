@@ -53,7 +53,7 @@ var Switch = (function (_React$Component) {
 
       el.onclick = function () {
         _this.props.onClick(_this.props.value);
-        el.className = el.className.match(/\bswitch on\b/) ? 'switch' : 'switch on';
+        el.className = el.className.match(/\bon\b/) !== null ? 'switch' : 'switch on';
       };
     }
   }, {
