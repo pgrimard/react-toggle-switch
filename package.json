@@ -1,6 +1,6 @@
 {
   "name": "react-toggle-switch",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple iOS inspired toggle switch",
   "dependencies": {
     "react": "^0.13.3"
@@ -12,7 +12,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.2.0"
   },
-  "main": "dist/scripts/switch.min.js",
+  "main": "src/scripts/switch.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pgrimard/react-toggle-switch.git"
