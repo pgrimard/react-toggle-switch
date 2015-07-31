@@ -2,7 +2,10 @@ import React from 'react';
 
 export default class Switch extends React.Component {
   static propTypes = {
-    value: React.PropTypes.string.isRequired,
+    value: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.bool
+    ]).isRequired,
     on: React.PropTypes.bool,
     onClick: React.PropTypes.func.isRequired
   };
