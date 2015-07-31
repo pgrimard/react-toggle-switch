@@ -1,7 +1,7 @@
 {
   "name": "react-toggle-switch",
-  "version": "0.1.1",
-  "description": "Simple iOS inspired toggld switch",
+  "version": "0.1.2",
+  "description": "Simple iOS inspired toggle switch",
   "dependencies": {
     "react": "^0.13.3"
   },
@@ -17,6 +17,7 @@
     "vinyl-source-stream": "^1.1.0",
     "yargs": "^3.16.1"
   },
+  "main": "dist/scripts/switch.min.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pgrimard/react-toggle-switch.git"
