@@ -2,15 +2,13 @@ import React from 'react';
 
 export default class Switch extends React.Component {
   static propTypes = {
-    value: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.bool
-    ]).isRequired,
+    value: React.PropTypes.string,
     on: React.PropTypes.bool,
     onClick: React.PropTypes.func.isRequired
   };
 
   static defaultProps = {
+    value: '',
     on: false
   };
 
@@ -23,7 +21,7 @@ export default class Switch extends React.Component {
 
     el.onclick = () => {
       this.props.onClick(this.props.value);
-      el.className = el.className.match(/\bon\b/) ? 'switch' : 'switch on';
+      el.className = el.className.match(/\bswitch on\b/) ? 'switch' : 'switch on';
     }
   }
 
