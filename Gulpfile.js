@@ -15,7 +15,7 @@ var production = (process.env.NODE_ENV === 'production' || argv.production);
 gulp.task('default', ['scripts', 'styles'], function() {});
 
 gulp.task('styles', function() {
-  return gulp.src('./css/switch.css')
+  return gulp.src('./src/css/switch.css')
     .pipe(minifyCss())
     .pipe(rename('switch.min.css'))
     .pipe(buffer())
@@ -24,7 +24,7 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
   var b = browserify({debug: !production})
-    .require('./src/switch.js', {entry: true})
+    .require('./src/scripts/switch.js', {entry: true})
     .transform(babelify);
 
   getNPMPackageIds().forEach(function(id) {
