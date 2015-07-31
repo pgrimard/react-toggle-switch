@@ -14,6 +14,10 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
+  gulp.src('./src/scripts/switch.js')
+    .pipe(babel())
+    .pipe(gulp.dest('./dist/scripts'));
+
   return gulp.src('./src/scripts/switch.js')
     .pipe(babel())
     .pipe(uglify())
