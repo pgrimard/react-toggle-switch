@@ -1,15 +1,13 @@
 # react-toggle-switch
 A simple iOS inspired toggle switch
 
-## Getting started
-
-Install react-toggle-switch
+## Install
 
 ```
 npm install --save react-toggle-switch
 ```
 
-Then use it in your React component
+## Usage
 
 ```javascript
 import React from 'react';
@@ -32,6 +30,6 @@ export default class MyComponent extends React.Component {
 
 If you're using SASS, then import the styles
 
-```
+```css
 @import "node_modules/react-toggle-switch/dist/css/switch.min.css"
 ```
