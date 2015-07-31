@@ -12,6 +12,7 @@ npm install --save react-toggle-switch
 Then use it in your React component
 
 ```javascript
+import React from 'react';
 import Switch from 'react-toggle-switch'
 
 export default class MyComponent extends React.Component {
@@ -29,7 +30,7 @@ export default class MyComponent extends React.Component {
 }
 ```
 
-If you're using SASS, the import the styles
+If you're using SASS, then import the styles
 
 ```
 @import "node_modules/react-toggle-switch/dist/css/switch.min.css"
