@@ -1,7 +1,7 @@
 # react-toggle-switch
 A simple iOS inspired toggle switch.  The actual switch won't be this big.
 
-![Switch](https://github.com/pgrimard/react-toggle-switch/raw/master/switch.png "Switch")
+<img src="https://github.com/pgrimard/react-toggle-switch/raw/master/switch.png" width="50" height="26" alt="Switch" title="Switch"/>
 
 ## Install
 
@@ -24,6 +24,7 @@ export default class MyComponent extends React.Component {
     return (
         <div>
             <Switch value={'some string or integer value'} on={true} onClick={this.toggle}/>
+            <Switch onClick={() => this.setState({prop: !this.state.prop})}/>
         </div>
     );
   }
