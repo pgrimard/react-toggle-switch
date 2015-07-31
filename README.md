@@ -1,5 +1,5 @@
 # react-toggle-switch
-A simple iOS inspired toggle switch.  The actual switch won't be this big.
+A simple iOS inspired toggle switch.
 
 <img src="https://github.com/pgrimard/react-toggle-switch/raw/master/switch.png" width="50" height="26" alt="Switch" title="Switch"/>
 
