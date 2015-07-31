@@ -12,6 +12,7 @@ npm install --save react-toggle-switch
 Then use it in your React component
 
 ```javascript
+import React from 'react';
 import Switch from 'react-toggle-switch'
 
 export default class MyComponent extends React.Component {
