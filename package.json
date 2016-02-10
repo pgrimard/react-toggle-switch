@@ -1,8 +1,8 @@
 {
   "name": "react-toggle-switch",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Simple iOS inspired toggle switch",
-  "dependencies": {
+  "peerDependencies": {
     "react": "^0.13.3"
   },
   "devDependencies": {
