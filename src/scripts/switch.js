@@ -14,20 +14,19 @@ export default class Switch extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {on: this.props.on};
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  componentDidMount() {
-    var el = React.findDOMNode(this);
-
-    el.onclick = () => {
-      this.props.onClick(this.props.value);
-      el.className = el.className.match(/\bon\b/) !== null ? 'switch' : 'switch on';
-    }
+  handleClick(e) {
+    e.preventDefault();
+    this.props.onClick(this.props.value);
+    this.setState({on: !this.state.on});
   }
 
   render() {
     return (
-      <div className={'switch ' + (this.props.on ? 'on' : '')}>
+      <div className={'switch ' + (this.state.on ? 'on' : '')} onClick={this.handleClick}>
         <div className="switch-toggle"></div>
       </div>
     );
