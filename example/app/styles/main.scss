@@ -1,0 +1,14 @@
+@import "~react-toggle-switch/dist/css/switch.min.css";
+
+html, body {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+
+  h1 {
+    font-weight: 200;
+  }
+
+  .switch {
+    float: left;
+    margin-top: 1em;
+  }
+}
