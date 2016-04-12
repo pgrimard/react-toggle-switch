@@ -27,7 +27,7 @@ export default class Switch extends React.Component {
   render() {
     return (
       <div className={'switch ' + (this.state.on ? 'on' : '')} onClick={this.handleClick}>
-        <div className="switch-toggle"></div>
+        <div className="switch-toggle" children={this.props.children}></div>
       </div>
     );
   }
