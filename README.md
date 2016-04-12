@@ -19,12 +19,15 @@ export default class MyComponent extends React.Component {
   toggle(value) {
     // do something with value
   }
-  
+
   render() {
     return (
         <div>
             <Switch value={'some string or integer value'} on={true} onClick={this.toggle}/>
             <Switch onClick={() => this.setState({prop: !this.state.prop})}/>
+            <Switch onClick={this.toggle}>
+              <i class="some-icon"/>
+            </Switch>
         </div>
     );
   }
