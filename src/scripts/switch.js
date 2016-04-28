@@ -2,13 +2,11 @@ import React from 'react';
 
 export default class Switch extends React.Component {
   static propTypes = {
-    value: React.PropTypes.string,
     on: React.PropTypes.bool,
     onClick: React.PropTypes.func.isRequired
   };
 
   static defaultProps = {
-    value: '',
     on: false
   };
 
@@ -17,10 +15,14 @@ export default class Switch extends React.Component {
     this.state = {on: this.props.on};
     this.handleClick = this.handleClick.bind(this);
   }
+  
+  componentWillReceiveProps(nextProps) {
+    this.setState({on: nextProps.on});
+  }
 
   handleClick(e) {
     e.preventDefault();
-    this.props.onClick(this.props.value);
+    this.props.onClick();
     this.setState({on: !this.state.on});
   }
 
