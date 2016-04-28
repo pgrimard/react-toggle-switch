@@ -1,6 +1,7 @@
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import LiveReloadPlugin from 'webpack-livereload-plugin';
 
 export default {
   entry: {
@@ -33,6 +34,7 @@ export default {
       minify: {
         collapseWhitespace: true
       }
-    })
+    }),
+    new LiveReloadPlugin()
   ]
 }

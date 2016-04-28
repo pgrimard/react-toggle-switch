@@ -11,4 +11,14 @@ html, body {
     float: left;
     margin-top: 1em;
   }
+
+  button {
+    padding: 10px;
+    border-radius: 2px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    width: 125px;
+    margin: 1em 0;
+  }
 }

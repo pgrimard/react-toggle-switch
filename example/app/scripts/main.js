@@ -15,9 +15,13 @@ class App extends React.Component {
     return (
       <div>
         <h1>React Toggle Switch</h1>
-        <span>Toggle state: {this.state.on ? 'On' : 'Off'}</span>
+        <span>Switch state: {this.state.on ? 'On' : 'Off'}</span>
         <div>
-          <Switch onClick={() => this.setState({on: !this.state.on})}/>
+          <Switch onClick={() => this.setState({on: !this.state.on})} on={this.state.on}/>
+        </div>
+        <div style={{clear: 'both', marginTop: '4em'}}>
+          This button demonstrates how to toggle the switch indirectly by simply updating the "on" prop.<br/>
+          <button onClick={() => this.setState({on: !this.state.on})}>{this.state.on ? 'Switch Off' : 'Switch On'}</button>
         </div>
       </div>
     );
