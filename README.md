@@ -13,17 +13,13 @@ npm install --save react-toggle-switch
 
 ```javascript
 import React from 'react';
+import {render} from 'react-dom';
 import Switch from 'react-toggle-switch'
 
 export default class MyComponent extends React.Component {
-  toggle(value) {
-    // do something with value
-  }
-
   render() {
     return (
         <div>
-            <Switch value={'some string or integer value'} on={true} onClick={this.toggle}/>
             <Switch onClick={() => this.setState({prop: !this.state.prop})}/>
             <Switch onClick={this.toggle}>
               <i class="some-icon"/>
@@ -36,9 +32,9 @@ export default class MyComponent extends React.Component {
 
 ### Props
 
-1. `onClick` - Required function handler for when the switch is clicked.
-1. `value` - Required value that will be passed to the onClick handler.
-2. `on` - Optional prop to set switch on or off.  Default is false.
+1. `onClick` - Required function handler to be called any time the switch is clicked.
+2. `on` - Optional property to set the switch on or off.  This can be useful if you want to update the state of the
+switch without actually clicking on it.  Default is false.
 
 ### Import Styling
 
