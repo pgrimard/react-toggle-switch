@@ -25,23 +25,36 @@ var Switch = (function (_React$Component) {
     key: 'propTypes',
     value: {
       on: _react2['default'].PropTypes.bool,
-      onClick: _react2['default'].PropTypes.func
+      onClick: _react2['default'].PropTypes.func,
+      enabled: _react2['default'].PropTypes.bool
     },
     enumerable: true
   }, {
     key: 'defaultProps',
     value: {
-      on: false
+      on: false,
+      onClick: function onClick() {},
+      enabled: true
     },
     enumerable: true
   }]);
 
   function Switch(props) {
+    var _this = this;
+
     _classCallCheck(this, Switch);
 
     _get(Object.getPrototypeOf(Switch.prototype), 'constructor', this).call(this, props);
+
+    this.handleClick = function (e) {
+      e.preventDefault();
+      if (_this.props.enabled) {
+        _this.props.onClick();
+        _this.setState({ on: !_this.state.on });
+      }
+    };
+
     this.state = { on: this.props.on };
-    this.handleClick = this.handleClick.bind(this);
   }
 
   _createClass(Switch, [{
@@ -50,18 +63,11 @@ var Switch = (function (_React$Component) {
       this.setState({ on: nextProps.on });
     }
   }, {
-    key: 'handleClick',
-    value: function handleClick(e) {
-      e.preventDefault();
-      this.props.onClick();
-      this.setState({ on: !this.state.on });
-    }
-  }, {
     key: 'render',
     value: function render() {
       return _react2['default'].createElement(
         'div',
-        { className: 'switch ' + (this.state.on ? 'on' : ''), onClick: this.handleClick },
+        { className: 'switch ' + (this.state.on ? 'on ' : '') + (this.props.enabled ? '' : 'disabled '), onClick: this.handleClick },
         _react2['default'].createElement('div', { className: "switch-toggle", children: this.props.children })
       );
     }

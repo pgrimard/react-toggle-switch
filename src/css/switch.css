@@ -27,3 +27,7 @@
 .switch.on .switch-toggle {
     left: 23px;
 }
+
+.switch.disabled {
+    cursor: not-allowed;
+}
