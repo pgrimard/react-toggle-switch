@@ -25,6 +25,7 @@ export default class MyComponent extends React.Component {
               <i class="some-icon"/>
             </Switch>
             <Switch enabled={false}/>
+            <Switch className='other-class'/>
         </div>
     );
   }
@@ -37,6 +38,7 @@ export default class MyComponent extends React.Component {
 2. `on` - Sets the switch on or off.  This can be useful if you want to update the state of the switch without actually
 clicking on it.  Default is `false`.
 3. `enabled` - If set to `false`, the switch cannot be toggled.  Default is `true`.
+3. `className` - An optional classname for the root element
 
 ### Import Styling
 
