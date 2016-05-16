@@ -35,7 +35,8 @@ export default class MyComponent extends React.Component {
 
 1. `onClick` - Function handler to be called any time the switch is clicked.
 2. `on` - Sets the switch on or off.  This can be useful if you want to update the state of the switch without actually
-clicking on it.  Default is false.
+clicking on it.  Default is `false`.
+3. `enabled` - If set to `false`, the switch cannot be toggled.  Default is `true`.
 
 ### Import Styling
 
