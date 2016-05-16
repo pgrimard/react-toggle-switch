@@ -25,7 +25,7 @@ var Switch = (function (_React$Component) {
     key: 'propTypes',
     value: {
       on: _react2['default'].PropTypes.bool,
-      onClick: _react2['default'].PropTypes.func.isRequired
+      onClick: _react2['default'].PropTypes.func
     },
     enumerable: true
   }, {

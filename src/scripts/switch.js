@@ -3,7 +3,7 @@ import React from 'react';
 export default class Switch extends React.Component {
   static propTypes = {
     on: React.PropTypes.bool,
-    onClick: React.PropTypes.func.isRequired
+    onClick: React.PropTypes.func
   };
 
   static defaultProps = {
