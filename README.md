@@ -24,6 +24,7 @@ export default class MyComponent extends React.Component {
             <Switch onClick={this.toggle}>
               <i class="some-icon"/>
             </Switch>
+            <Switch enabled={false}/>
         </div>
     );
   }
