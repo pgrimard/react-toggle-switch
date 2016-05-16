@@ -3,12 +3,22 @@
 html, body {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
 
+  #app {
+    width: 500px;
+    margin: 0 auto;
+  }
+
   h1 {
     font-weight: 200;
   }
 
+  h2 {
+    border-bottom: 1px solid #dddddd;
+    margin: 0 0 1em;
+  }
+
   .switch {
-    float: left;
+    float: none;
     margin-top: 1em;
   }
 
@@ -20,5 +30,16 @@ html, body {
     cursor: pointer;
     width: 125px;
     margin: 1em 0;
+  }
+
+  .example-usage {
+    border: 1px solid #dddddd;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 1em;
+
+    p {
+      margin: 0;
+    }
   }
 }
