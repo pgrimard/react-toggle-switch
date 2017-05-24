@@ -12,11 +12,11 @@ npm install --save react-toggle-switch
 ## Usage
 
 ```javascript
-import React from 'react';
+import React, {Component} from 'react';
 import {render} from 'react-dom';
 import Switch from 'react-toggle-switch'
 
-class MyComponent extends React.Component {
+class MyComponent extends Component {
 
   constructor(props) {
     super(props);
