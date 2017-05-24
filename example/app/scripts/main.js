@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDom from 'react-dom';
 import Switch from 'react-toggle-switch';
 import 'styles/main.scss';
 
-class Usage1 extends React.Component {
+class Usage1 extends Component {
   constructor(props) {
     super(props);
     this.state = {on: false};
@@ -20,7 +20,7 @@ class Usage1 extends React.Component {
   }
 }
 
-class Usage2 extends React.Component {
+class Usage2 extends Component {
   constructor(props) {
     super(props);
     this.state = {on: false};
@@ -40,7 +40,7 @@ class Usage2 extends React.Component {
   }
 }
 
-class Usage3 extends React.Component {
+class Usage3 extends Component {
   constructor(props) {
     super(props);
     this.state = {on: false};
@@ -59,7 +59,7 @@ class Usage3 extends React.Component {
   }
 }
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
