@@ -6,7 +6,8 @@
     "dist": "gulp"
   },
   "peerDependencies": {
-    "react": ">=0.13.3"
+    "react": ">=0.13.3",
+    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

@@ -14,20 +14,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var Switch = (function (_React$Component) {
-  _inherits(Switch, _React$Component);
+var Switch = (function (_Component) {
+  _inherits(Switch, _Component);
 
   _createClass(Switch, null, [{
     key: 'propTypes',
     value: {
-      on: _react2['default'].PropTypes.bool,
-      onClick: _react2['default'].PropTypes.func,
-      enabled: _react2['default'].PropTypes.bool,
-      className: _react2['default'].PropTypes.string
+      on: _propTypes2['default'].bool,
+      onClick: _propTypes2['default'].func,
+      enabled: _propTypes2['default'].bool,
+      className: _propTypes2['default'].string
     },
     enumerable: true
   }, {
@@ -77,7 +81,7 @@ var Switch = (function (_React$Component) {
   }]);
 
   return Switch;
-})(_react2['default'].Component);
+})(_react.Component);
 
 exports['default'] = Switch;
 module.exports = exports['default'];
