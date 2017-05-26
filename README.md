@@ -12,24 +12,50 @@ npm install --save react-toggle-switch
 ## Usage
 
 ```javascript
-import React from 'react';
+import React, {Component} from 'react';
 import {render} from 'react-dom';
 import Switch from 'react-toggle-switch'
 
-export default class MyComponent extends React.Component {
+class MyComponent extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      switched: false
+    };
+  }
+
+  toggleSwitch = () => {
+    this.setState(prevState => {
+      return {
+        switched: !prevState.switched
+      };
+    });
+  };
+
   render() {
     return (
         <div>
-            <Switch onClick={() => this.setState({prop: !this.state.prop})}/>
-            <Switch onClick={this.toggle}>
+            {/* Basic Switch */}
+            <Switch onClick={this.toggleSwitch}/>
+
+            {/* With children */}
+            <Switch onClick={this.toggleSwitch}>
               <i class="some-icon"/>
             </Switch>
+
+            {/* Disabled */}
             <Switch enabled={false}/>
+
+            {/* Custom classnames */}
             <Switch className='other-class'/>
         </div>
     );
   }
+
 }
+
+export default MyComponent;
 ```
 
 ### Props
