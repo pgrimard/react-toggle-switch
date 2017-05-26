@@ -31,7 +31,7 @@ class MyComponent extends Component {
         switched: !prevState.switched
       };
     });
-  }
+  };
 
   render() {
     return (
