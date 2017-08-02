@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 
 export default class Switch extends Component {
   static propTypes = {
+    id: PropTypes.string,
     on: PropTypes.bool,
     onClick: PropTypes.func,
     enabled: PropTypes.bool,
@@ -10,6 +11,7 @@ export default class Switch extends Component {
   };
 
   static defaultProps = {
+    id: '',
     on: false,
     onClick: () => {},
     enabled: true,
@@ -36,7 +38,7 @@ export default class Switch extends Component {
   render() {
     const className = ['switch', this.props.className, (this.state.on ? 'on ' : ''), (this.props.enabled ? '' : 'disabled ')].join(' ');
     return (
-      <div className={className} onClick={this.handleClick}>
+      <div id={this.props.id} className={className} onClick={this.handleClick}>
         <div className="switch-toggle" children={this.props.children}></div>
       </div>
     );
