@@ -56,7 +56,6 @@ var Switch = (function (_Component) {
       e.preventDefault();
       if (_this.props.enabled) {
         _this.props.onClick();
-        _this.setState({ on: !_this.state.on });
       }
     };
 

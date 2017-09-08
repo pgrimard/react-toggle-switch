@@ -29,7 +29,6 @@ export default class Switch extends Component {
     e.preventDefault();
     if(this.props.enabled) {
       this.props.onClick();
-      this.setState({on: !this.state.on});
     }
   };
 
