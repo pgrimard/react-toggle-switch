@@ -22,56 +22,42 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var propTypes = {
+  on: _propTypes2['default'].bool.required,
+  onClick: _propTypes2['default'].func.required,
+  enabled: _propTypes2['default'].bool,
+  className: _propTypes2['default'].string
+};
+
+var defaultProps = {
+  enabled: true,
+  className: ''
+};
+
 var Switch = (function (_Component) {
   _inherits(Switch, _Component);
 
-  _createClass(Switch, null, [{
-    key: 'propTypes',
-    value: {
-      on: _propTypes2['default'].bool,
-      onClick: _propTypes2['default'].func,
-      enabled: _propTypes2['default'].bool,
-      className: _propTypes2['default'].string
-    },
-    enumerable: true
-  }, {
-    key: 'defaultProps',
-    value: {
-      on: false,
-      onClick: function onClick() {},
-      enabled: true,
-      className: ''
-    },
-    enumerable: true
-  }]);
-
-  function Switch(props) {
+  function Switch() {
     var _this = this;
 
     _classCallCheck(this, Switch);
 
-    _get(Object.getPrototypeOf(Switch.prototype), 'constructor', this).call(this, props);
+    _get(Object.getPrototypeOf(Switch.prototype), 'constructor', this).apply(this, arguments);
 
     this.handleClick = function (e) {
       e.preventDefault();
-      if (_this.props.enabled) {
-        _this.props.onClick();
-        _this.setState({ on: !_this.state.on });
-      }
-    };
+      var _props = _this.props;
+      var enabled = _props.enabled;
+      var onClick = _props.onClick;
 
-    this.state = { on: this.props.on };
+      if (enabled) onClick();
+    };
   }
 
   _createClass(Switch, [{
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(nextProps) {
-      this.setState({ on: nextProps.on });
-    }
-  }, {
     key: 'render',
     value: function render() {
-      var className = ['switch', this.props.className, this.state.on ? 'on ' : '', this.props.enabled ? '' : 'disabled '].join(' ');
+      var className = ['switch', this.props.className, this.props.on ? 'on ' : '', this.props.enabled ? '' : 'disabled '].join(' ');
       return _react2['default'].createElement(
         'div',
         { className: className, onClick: this.handleClick },
@@ -82,6 +68,9 @@ var Switch = (function (_Component) {
 
   return Switch;
 })(_react.Component);
+
+Switch.propTypes = propTypes;
+Switch.defaultProps = defaultProps;
 
 exports['default'] = Switch;
 module.exports = exports['default'];

@@ -17,7 +17,6 @@ import {render} from 'react-dom';
 import Switch from 'react-toggle-switch'
 
 class MyComponent extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -45,10 +44,10 @@ class MyComponent extends Component {
             </Switch>
 
             {/* Disabled */}
-            <Switch enabled={false} on={this.state.switched}/>
+            <Switch onClick={this.toggleSwitch} on={this.state.switched} enabled={false}/>
 
             {/* Custom classnames */}
-            <Switch className='other-class' on={this.state.switched}/>
+            <Switch onClick={this.toggleSwitch} on={this.state.switched} className='other-class'/>
         </div>
     );
   }
@@ -58,13 +57,18 @@ class MyComponent extends Component {
 export default MyComponent;
 ```
 
+### Upgrading to version 3.0.0
+
+Please take note that as of version 3.0.0, a `Switch` no longer maintains an internal state.  Using this component
+requires that you pass both an `onClick` method and an `on` value to set the current state of the `Switch`.  More
+details about why this was changed can be found [here](https://github.com/pgrimard/react-toggle-switch/pull/18).
+
 ### Props
 
 1. `onClick` - Function handler to be called any time the switch is clicked.
-2. `on` - Sets the switch on or off.  This can be useful if you want to update the state of the switch without actually
-clicking on it.  Default is `false`.
+2. `on` - Sets the switch on or off.
 3. `enabled` - If set to `false`, the switch cannot be toggled.  Default is `true`.
-3. `className` - An optional classname for the root element
+3. `className` - Optional CSS classes for the root element.
 
 ### Import Styling
 
