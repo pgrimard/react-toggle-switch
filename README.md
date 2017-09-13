@@ -37,18 +37,18 @@ class MyComponent extends Component {
     return (
         <div>
             {/* Basic Switch */}
-            <Switch onClick={this.toggleSwitch}/>
+            <Switch onClick={this.toggleSwitch} on={this.state.switched}/>
 
             {/* With children */}
-            <Switch onClick={this.toggleSwitch}>
+            <Switch onClick={this.toggleSwitch} on={this.state.switched}>
               <i class="some-icon"/>
             </Switch>
 
             {/* Disabled */}
-            <Switch enabled={false}/>
+            <Switch enabled={false} on={this.state.switched}/>
 
             {/* Custom classnames */}
-            <Switch className='other-class'/>
+            <Switch className='other-class' on={this.state.switched}/>
         </div>
     );
   }
