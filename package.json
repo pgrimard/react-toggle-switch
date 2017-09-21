@@ -1,20 +1,25 @@
 {
   "name": "react-toggle-switch",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Simple iOS inspired toggle switch",
   "scripts": {
-    "dist": "gulp"
+    "clean": "rimraf dist && mkdir dist",
+    "css": "mkdir dist/css && cleancss -o dist/css/switch.min.css src/css/switch.css",
+    "js": "mkdir dist/scripts && babel src/scripts -o dist/scripts/switch.min.js",
+    "build": "npm run clean && npm run css && npm run js"
   },
   "peerDependencies": {
     "react": ">=0.13.3",
     "prop-types": "^15.5.10"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-babel": "^5.3.0",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.5.4"
+    "babel-cli": "^6.26.0",
+    "babel-preset-babili": "^0.1.4",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-css-cli": "^4.1.10",
+    "rimraf": "^2.6.2",
+    "uglify-js": "^3.1.1"
   },
   "main": "dist/scripts/switch.js",
   "repository": {

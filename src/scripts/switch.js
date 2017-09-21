@@ -14,13 +14,13 @@ const defaultProps = {
 };
 
 class Switch extends Component {
-  handleClick = (e) => {
+  handleClick(e) {
     e.preventDefault();
     const {enabled, onClick} = this.props;
 
     if(enabled)
       onClick();
-  };
+  }
 
   render() {
     const className = ['switch', this.props.className, (this.props.on ? 'on ' : ''), (this.props.enabled ? '' : 'disabled ')].join(' ');
