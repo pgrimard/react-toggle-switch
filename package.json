@@ -1,6 +1,6 @@
 {
   "name": "react-toggle-switch",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Simple iOS inspired toggle switch",
   "scripts": {
     "clean": "rimraf dist && mkdir dist",
@@ -21,7 +21,7 @@
     "rimraf": "^2.6.2",
     "uglify-js": "^3.1.1"
   },
-  "main": "dist/scripts/switch.js",
+  "main": "dist/scripts/switch.min.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pgrimard/react-toggle-switch.git"
