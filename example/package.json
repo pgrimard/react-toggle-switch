@@ -1,0 +1,36 @@
+{
+  "name": "react-toggle-switch-example",
+  "version": "2.0.0",
+  "description": "React Toggle Switch Example",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf ../docs && mkdir ../docs",
+    "css": "mkdir ../docs/css && cleancss -o ../docs/css/styles.min.css css/styles.css",
+    "js": "mkdir ../docs/scripts && webpack -p",
+    "build": "npm run clean && npm run css && npm run js",
+    "watch": "webpack -d --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-babili": "^0.1.4",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-css-cli": "^4.1.10",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^2.30.1",
+    "postcss-loader": "^2.0.6",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.6.0"
+  },
+  "author": "Patrick Grimard <pgrimard@gmail.com>",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-toggle-switch": "file:///Users/Patrick/IdeaProjects/react-toggle-switch"
+  }
+}
