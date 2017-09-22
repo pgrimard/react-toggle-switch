@@ -13,23 +13,13 @@ const defaultProps = {
   className: ''
 };
 
-class Switch extends Component {
-  handleClick(e) {
-    e.preventDefault();
-    const {enabled, onClick} = this.props;
-
-    if(enabled)
-      onClick();
-  }
-
-  render() {
-    const className = ['switch', this.props.className, (this.props.on ? 'on ' : ''), (this.props.enabled ? '' : 'disabled ')].join(' ');
-    return (
-      <div className={className} onClick={this.handleClick}>
-        <div className="switch-toggle" children={this.props.children}></div>
-      </div>
-    );
-  }
+function Switch({on, onClick, enabled, className, children}) {
+  const classes = ['switch', className, (on ? 'on ' : ''), (enabled ? '' : 'disabled ')].join(' ');
+  return (
+    <div className={classes} onClick={() => enabled ? onClick() : () => {}}>
+      <div className="switch-toggle" children={children}></div>
+    </div>
+  );
 }
 
 Switch.propTypes = propTypes;
