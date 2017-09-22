@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 const propTypes = {
-  on: PropTypes.bool.required,
-  onClick: PropTypes.func.required,
+  on: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
   enabled: PropTypes.bool,
   className: PropTypes.string
 };
