@@ -9,6 +9,10 @@ A simple iOS inspired toggle switch.
 npm install --save react-toggle-switch
 ```
 
+## Demo
+
+https://patrickgrimard.io/react-toggle-switch/
+
 ## Usage
 
 ```javascript
