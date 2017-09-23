@@ -40,7 +40,8 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: __dirname + '/scripts/index.js',
   output: {
-    filename: '../docs/scripts/bundle.min.js'
+    filename: '../docs/scripts/bundle.min.js',
+    publicPath: '/'
   },
   resolve: {
     alias: {
