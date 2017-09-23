@@ -25,7 +25,7 @@ class Example extends Component {
           <div className="card-body">
             <p>With Children</p>
             <Switch onClick={() => this.setState({on: !this.state.on})} on={this.state.on}>
-              <i className="fa fa-bolt text-center"></i>
+              <i className="fa fa-bolt" style={{position: 'relative', left: '8px', top: '-1px'}}></i>
             </Switch>
           </div>
         </div>

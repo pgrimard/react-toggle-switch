@@ -2,3 +2,7 @@ $fa-font-path: '/docs/fonts';
 @import "../node_modules/react-toggle-switch/dist/css/switch.min.css";
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "../node_modules/font-awesome/css/font-awesome.min.css";
+
+.switch.on.other-class {
+  background: cornflowerblue;
+}
