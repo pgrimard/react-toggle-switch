@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
 import Switch from 'react-toggle-switch';
-import 'styles/styles.css';
+import 'styles/styles.scss';
 
 class Example extends Component {
   constructor(props) {
@@ -13,20 +13,36 @@ class Example extends Component {
 
   render() {
     return (
-      <div>
-        <p>Basic</p>
-        <Switch onClick={() => this.setState({on: !this.state.on})} on={this.state.on}/>
+      <div className="row">
+        <div className="card col-sm">
+          <div className="card-body">
+            <p>Basic</p>
+            <Switch onClick={() => this.setState({on: !this.state.on})} on={this.state.on}/>
+          </div>
+        </div>
 
-        <p>With Children</p>
-        <Switch onClick={() => this.setState({on: !this.state.on})} on={this.state.on}>
-          <div>i</div>
-        </Switch>
+        <div className="card col-sm">
+          <div className="card-body">
+            <p>With Children</p>
+            <Switch onClick={() => this.setState({on: !this.state.on})} on={this.state.on}>
+              <i className="fa fa-bolt text-center"></i>
+            </Switch>
+          </div>
+        </div>
 
-        <p>Disabled</p>
-        <Switch onClick={() => this.setState({on: !this.state.on})} on={this.state.on} enabled={false}/>
+        <div className="card col-sm">
+          <div className="card-body">
+            <p>Disabled</p>
+            <Switch onClick={() => this.setState({on: !this.state.on})} on={this.state.on} enabled={false}/>
+          </div>
+        </div>
 
-        <p>Custom Classnames</p>
-        <Switch onClick={() => this.setState({on: !this.state.on})} on={this.state.on} className="other-class"/>
+        <div className="card col-sm">
+          <div className="card-body">
+            <p>Custom Classnames</p>
+            <Switch onClick={() => this.setState({on: !this.state.on})} on={this.state.on} className="other-class"/>
+          </div>
+        </div>
       </div>
     );
   }
