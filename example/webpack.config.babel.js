@@ -41,7 +41,7 @@ module.exports = {
   entry: __dirname + '/scripts/index.js',
   output: {
     filename: '../docs/scripts/bundle.min.js',
-    publicPath: '/'
+    publicPath: './'
   },
   resolve: {
     alias: {
