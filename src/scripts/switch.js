@@ -10,13 +10,14 @@ const propTypes = {
 
 const defaultProps = {
   enabled: true,
-  className: ''
+  className: '',
+  onDisabledClick: () => {}
 };
 
-function Switch({on, onClick, enabled, className, children}) {
+function Switch({on, onClick, onDisabledClick, enabled, className, children}) {
   const classes = ['switch', className, (on ? 'on ' : ''), (enabled ? '' : 'disabled ')].join(' ');
   return (
-    <div className={classes} onClick={() => enabled ? onClick() : () => {}}>
+    <div className={classes} onClick={(e) => enabled ? onClick(e) : onDisabledClick(e)}>
       <div className="switch-toggle" children={children}></div>
     </div>
   );
